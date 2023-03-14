@@ -13,12 +13,20 @@ class CodeTest extends AnyFunSuite {
   val sixthTestCase  = CalculateElectricityCharges(123456, "Jitendra", "Gorakhpur", 4060, 5500)
 
   test("Electricity bill calculation is being done "){
+
+    //Successfull conditions (test cases will pass in these conditions)
+
     assert(firstTestCase.calculateElectricityCharges == 5994.5)
     assert(secondTestCase.calculateElectricityCharges == 1050.0)
     assert(thirdTestCase.calculateElectricityCharges == 1987.50)
     assert(fourthTestCase.calculateElectricityCharges == 3087.50)
     assert(fifthTestCase.calculateElectricityCharges == 2595.0)
     assert(sixthTestCase.calculateElectricityCharges == 11077.50)
+
+    //Unsuccessfull conditions(Test cases will fail in these condtions)
+
+    assert(fifthTestCase.calculateElectricityCharges != 2595.0)
+    assert(sixthTestCase.calculateElectricityCharges != 11077.50)
 
   }
 }
