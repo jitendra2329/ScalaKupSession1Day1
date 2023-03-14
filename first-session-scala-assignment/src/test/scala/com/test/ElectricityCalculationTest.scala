@@ -16,17 +16,17 @@ class CodeTest extends AnyFunSuite {
 
     //Successfull conditions (test cases will pass in these conditions)
 
-    assert(firstTestCase.calculateElectricityCharges == 5994.5)
-    assert(secondTestCase.calculateElectricityCharges == 1050.0)
-    assert(thirdTestCase.calculateElectricityCharges == 1987.50)
-    assert(fourthTestCase.calculateElectricityCharges == 3087.50)
-    assert(fifthTestCase.calculateElectricityCharges == 2595.0)
-    assert(sixthTestCase.calculateElectricityCharges == 11077.50)
+    assert(firstTestCase.calculateElectricityCharges == 7073.51)
+    assert(secondTestCase.calculateElectricityCharges == 1239)
+    assert(thirdTestCase.calculateElectricityCharges == 2345.25)
+    assert(fourthTestCase.calculateElectricityCharges == 3643.25)
+    assert(fifthTestCase.calculateElectricityCharges == 3062.1)
+    assert(sixthTestCase.calculateElectricityCharges == 13071.45)
 
     //Unsuccessfull conditions(Test cases will fail in these condtions)
 
-    assert(fifthTestCase.calculateElectricityCharges != 2595.0)
-    assert(sixthTestCase.calculateElectricityCharges != 11077.50)
+    assert(fifthTestCase.calculateElectricityCharges != 3062.1)
+    assert(sixthTestCase.calculateElectricityCharges != 13071.45)
 
   }
 }

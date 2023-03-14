@@ -19,23 +19,27 @@ case class CalculateElectricityCharges(
   //Defining the method: calculateElectricityCharges for calculating the total amount of electricity bill
 
    def calculateElectricityCharges: Double = {
+      val gst: Int = 18
       if(totalUnits > 0 && totalUnits <= 250){
         val unitForCalculation: Int = totalUnits
         val totalAmount: Double = unitForCalculation * 5.25
-        totalAmount
+        val gstAmount: Double = (totalAmount * gst) / 100
+        totalAmount + gstAmount
 
       } else if(totalUnits > 250 && totalUnits <= 450){
             val firstSlabOfUnits: Int = 250
             val secondSlabOfUnits: Int = totalUnits - firstSlabOfUnits
             val totalAmount: Double = (firstSlabOfUnits * 5.25) + (secondSlabOfUnits * 6.75)
-            totalAmount
+            val gstAmount: Double = (totalAmount * gst) / 100
+            totalAmount + gstAmount
 
             } else {
                   val firstSlabOfUnits: Int = 250
                   val secondSlabOfUnits: Int = 200
                   val finalSlabOfUnits: Int = totalUnits - (firstSlabOfUnits + secondSlabOfUnits)
                   val totalAmount: Double = (firstSlabOfUnits * 5.25) + (secondSlabOfUnits * 6.75) + (finalSlabOfUnits * 8.50)
-                  totalAmount
+                  val gstAmount: Double = (totalAmount * gst) / 100
+                  totalAmount + gstAmount
 
              }
       }
