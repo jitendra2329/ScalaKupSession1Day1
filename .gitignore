@@ -1,2 +1,6 @@
 *.class
 *.log
+*/.idea/
+*/.bsp/
+*/target/
+/first-session-scala-assignment/project/target/
